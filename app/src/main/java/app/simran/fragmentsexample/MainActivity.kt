@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private fun showFragment1() {
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment, firstFragment)
+            addToBackStack(null)
             commit()
         }
     }
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     private fun showFragment2() {
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment, secondFragment)
+            addToBackStack(null)
             commit()
         }
     }
